@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMART Property & Facility Services | Spaces That Work Better</title>
+<meta name="description" content="SMART Property and Facility Services Pvt. Ltd. — integrated project management, housekeeping, office interiors and facility services across India.">
+<meta property="og:title" content="SMART Property & Facility Services">
+<meta property="og:description" content="Integrated project management and facility services for cleaner, safer and more productive spaces.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--forest:#214D2B;--green:#376B35;--leaf:#76A943;--char:#17242C;--white:#fff;--grey:#F4F6F3;--line:#e3e8e1;--muted:#5c6a63;--r:14px;--ease:cubic-bezier(.22,.8,.24,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,system-ui,sans-serif;color:var(--char);background:#fff;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--leaf);outline-offset:3px;border-radius:6px}
+.wrap{width:min(1240px,92%);margin-inline:auto}
+.label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;color:var(--green);margin-bottom:.8rem;display:inline-flex;align-items:center;gap:.6rem}
+.label::before{content:"";width:22px;height:2px;background:var(--leaf)}
+h1,h2,h3{letter-spacing:-.025em;line-height:1.12;font-weight:700}
+h2{font-size:clamp(1.8rem,3.4vw,2.7rem)}
+p.lead{color:var(--muted);max-width:56ch}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.85rem 1.5rem;border-radius:999px;background:var(--green);color:#fff;font-weight:600;font-size:.9rem;transition:.35s var(--ease)}
+.btn:hover{background:var(--forest);transform:translateY(-2px);box-shadow:0 12px 26px -10px rgba(33,77,43,.6)}
+.btn svg{transition:transform .35s var(--ease)}.btn:hover svg{transform:translateX(4px)}
+.btn.light{background:var(--leaf)}.btn.light:hover{background:#fff;color:var(--forest)}
+.ico{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:.4s var(--ease);padding:1.1rem 0}
+header.solid{background:rgba(23,36,44,.94);backdrop-filter:blur(12px);padding:.6rem 0;box-shadow:0 8px 30px rgba(0,0,0,.18)}
+.nav{display:flex;align-items:center;justify-content:space-between;color:#fff}
+.logo{display:flex;align-items:center;gap:.65rem;line-height:1}
+.logo svg{width:34px;height:34px}
+.logo b{font-size:1.45rem;letter-spacing:.24em;font-weight:500}
+.logo small{display:block;font-size:.5rem;letter-spacing:.16em;opacity:.75;margin-top:4px}
+.menu{display:flex;gap:2rem;font-size:.86rem;font-weight:500}
+.menu a{position:relative;opacity:.9}
+.menu a::after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:var(--leaf);transition:width .35s var(--ease)}
+.menu a:hover::after,.menu a.on::after{width:100%}
+.burger{display:none;width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.3)}
+.burger span{display:block;width:18px;height:2px;background:#fff;margin:4px auto;transition:.3s}
+.drawer{position:fixed;inset:0;background:var(--char);z-index:60;display:flex;flex-direction:column;justify-content:center;padding:2rem 8%;gap:1.2rem;transform:translateX(100%);transition:.5s var(--ease)}
+.drawer.open{transform:none}
+.drawer a{color:#fff;font-size:1.6rem;font-weight:600;letter-spacing:-.02em}
+.drawer .x{position:absolute;top:1.2rem;right:6%;color:#fff;font-size:2rem}
+
+/* hero */
+.hero{position:relative;height:100svh;min-height:640px;max-height:900px;color:#fff;overflow:hidden;background:var(--char)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 7s linear}
+.slide.on img{transform:scale(1)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,24,20,.92) 0%,rgba(14,24,20,.6) 45%,rgba(14,24,20,.1) 100%),linear-gradient(0deg,rgba(14,24,20,.6),transparent 40%)}
+.hero-c{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:center;padding-top:60px}
+.hero .label{color:#cfe3bd}
+.hero h1{font-size:clamp(2.3rem,5.4vw,4.4rem);max-width:13ch;margin-bottom:1.1rem}
+.hero p{font-size:clamp(1.05rem,1.6vw,1.35rem);font-weight:300;max-width:30ch;opacity:.9;margin-bottom:2.2rem}
+.hero .txt>*{animation:rise 1s var(--ease) both}
+.hero .txt>*:nth-child(2){animation-delay:.12s}.hero .txt>*:nth-child(3){animation-delay:.24s}.hero .txt>*:nth-child(4){animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}}
+.acts{display:flex;gap:1.6rem;align-items:center;flex-wrap:wrap}
+.play{display:flex;align-items:center;gap:.8rem;font-weight:500;font-size:.9rem}
+.play i{width:48px;height:48px;border-radius:50%;background:#fff;display:grid;place-items:center;position:relative}
+.play i::before{content:"";position:absolute;inset:-6px;border-radius:50%;border:1px solid rgba(255,255,255,.5);animation:pulse 2.2s infinite}
+@keyframes pulse{to{transform:scale(1.5);opacity:0}}
+.play i svg{fill:var(--forest);width:16px;margin-left:3px}
+.ctrl{position:absolute;z-index:3;bottom:2.4rem;left:0;right:0}
+.ctrl .wrap{display:flex;align-items:center;gap:1rem;font-weight:600;font-size:.9rem}
+.bar{width:90px;height:2px;background:rgba(255,255,255,.25);position:relative;overflow:hidden}
+.bar i{position:absolute;inset:0;background:var(--leaf);transform-origin:left;transform:scaleX(0)}
+.bar i.run{animation:prog 6s linear forwards}
+@keyframes prog{to{transform:scaleX(1)}}
+.arrows{display:flex;gap:.5rem;margin-left:1rem}
+.arrows button,.circ{width:38px;height:38px;border-radius:50%;border:1px solid rgba(255,255,255,.35);display:grid;place-items:center;transition:.3s}
+.arrows button:hover{background:#fff;color:var(--forest)}
+.tags{position:absolute;z-index:3;right:5%;top:40%;display:flex;flex-direction:column;gap:1rem;font-size:.7rem;letter-spacing:.2em}
+.tags span{display:flex;align-items:center;gap:.6rem;opacity:.85}.tags span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--leaf)}
+.float{position:absolute;z-index:3;right:5%;bottom:2.2rem;background:#fff;color:var(--char);border-radius:var(--r);display:flex;align-items:center;gap:1rem;padding:.6rem 1.2rem .6rem .6rem;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);animation:rise 1s .6s var(--ease) both}
+.float img{width:110px;height:76px;object-fit:cover;border-radius:10px}
+.float small{color:var(--muted);font-size:.78rem}.float b{display:block;font-size:.95rem;line-height:1.25}
+
+/* strip */
+.strip{border-bottom:1px solid var(--line);background:#fff}
+.strip .wrap{display:grid;grid-template-columns:repeat(6,1fr)}
+.strip a{display:flex;align-items:center;gap:.8rem;padding:1.6rem 1rem;font-size:.83rem;font-weight:500;line-height:1.3;border-right:1px solid var(--line);transition:.3s}
+.strip a:last-child{border:0}
+.strip a .ico{width:30px;height:30px;color:var(--green);flex:none;transition:transform .4s var(--ease)}
+.strip a:hover{background:var(--grey)}.strip a:hover .ico{transform:translateY(-3px) rotate(-6deg)}
+
+section{padding:clamp(4rem,8vw,6.5rem) 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.6rem;flex-wrap:wrap}
+.more{color:var(--green);font-weight:600;font-size:.85rem;display:inline-flex;gap:.4rem;align-items:center}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.15fr;gap:4rem;align-items:center}
+.about h2{margin-bottom:1.2rem}.about p{margin-bottom:2rem}
+.about ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.7rem 1.4rem;margin:-0.6rem 0 2rem;font-size:.9rem;font-weight:500}
+.about li{display:flex;gap:.5rem;align-items:center}.about li::before{content:"✓";color:var(--leaf);font-weight:700}
+.collage{position:relative;display:grid;grid-template-columns:1.4fr 1fr;gap:1rem;height:460px}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:18px}
+.collage .b{margin-top:2.5rem}
+.badge{position:absolute;left:58%;top:50%;transform:translate(-50%,-50%);width:150px;height:150px;border-radius:50%;background:var(--forest);color:#fff;display:grid;place-content:center;text-align:center;border:6px solid #fff;box-shadow:0 20px 40px -15px rgba(0,0,0,.4)}
+.badge b{font-size:1.6rem;line-height:1}.badge small{font-size:.75rem;opacity:.85;margin-top:.3rem}
+
+/* services */
+.bg-grey{background:var(--grey)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.45s var(--ease);display:block}
+.card .im{height:200px;overflow:hidden}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.card:hover{transform:translateY(-6px);box-shadow:0 30px 50px -28px rgba(23,36,44,.35)}
+.card:hover .im img{transform:scale(1.07)}
+.card .bd{padding:0 1.4rem 1.5rem;position:relative}
+.card .ci{width:56px;height:56px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--green);margin-top:-28px;position:relative;margin-bottom:.9rem}
+.card h3{font-size:1.08rem;margin-bottom:.4rem;padding-right:3rem}
+.card p{font-size:.88rem;color:var(--muted)}
+.card .go{position:absolute;right:1.4rem;top:1.2rem;width:36px;height:36px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.35s}
+.card:hover .go{background:var(--green);color:#fff;border-color:var(--green)}
+
+/* why */
+.why{position:relative;color:#fff;overflow:hidden;background:var(--forest)}
+.why>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.35}
+.why::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--forest) 25%,rgba(33,77,43,.55))}
+.why .wrap{position:relative;display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:center}
+.why .label{color:#cfe3bd}.why p{opacity:.85;margin:1rem 0 2rem;max-width:46ch}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.15);border-radius:var(--r);overflow:hidden;backdrop-filter:blur(6px)}
+.stats div{background:rgba(23,36,44,.35);padding:1.6rem 1.2rem}
+.stats .ico{color:#cfe3bd;width:28px;height:28px;margin-bottom:1rem}
+.stats b{font-size:1.9rem;display:block;line-height:1}.stats small{font-size:.78rem;opacity:.8}
+
+/* industries */
+.grid6{display:grid;grid-template-columns:repeat(6,1fr);gap:1rem}
+.ind{border-radius:var(--r);overflow:hidden;background:#fff;border:1px solid var(--line);transition:.4s var(--ease)}
+.ind .im{height:170px;overflow:hidden}.ind img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.ind:hover{box-shadow:0 24px 40px -24px rgba(0,0,0,.35);transform:translateY(-4px)}.ind:hover img{transform:scale(1.08)}
+.ind .bd{padding:0 1rem 1.1rem}.ind .ci{width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--green);margin-top:-21px;position:relative;margin-bottom:.5rem}
+.ind .ci .ico{width:18px;height:18px}.ind h3{font-size:.9rem;font-weight:600}
+
+/* sustain */
+.sus{position:relative;color:#fff;overflow:hidden;background:var(--forest)}
+.sus>img{position:absolute;inset:-5%;width:110%;height:110%;object-fit:cover;animation:drift 22s ease-in-out infinite alternate}
+@keyframes drift{to{transform:scale(1.08) translateX(-2%)}}
+.sus::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,40,22,.95) 30%,rgba(16,40,22,.35))}
+.sus .wrap{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1.3fr;gap:3rem;align-items:center}
+.sus .label{color:#cfe3bd}.sus p{opacity:.85;margin:1rem 0 2rem;max-width:40ch}
+.pill{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;text-align:center}
+.pill div{font-size:.88rem;font-weight:500}
+.pill i{width:74px;height:74px;border-radius:50%;border:1.5px solid rgba(255,255,255,.6);display:grid;place-items:center;margin:0 auto .9rem;transition:.5s var(--ease)}
+.pill i .ico{width:30px;height:30px}
+.pill div:hover i{background:var(--leaf);border-color:var(--leaf);transform:translateY(-6px) rotate(8deg)}
+
+/* projects */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.proj{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:#fff;transition:.4s var(--ease)}
+.proj .im{height:220px;overflow:hidden;position:relative}.proj img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.proj .im span{position:absolute;left:1rem;top:1rem;background:rgba(255,255,255,.92);font-size:.7rem;font-weight:600;padding:.3rem .7rem;border-radius:99px;color:var(--forest)}
+.proj:hover{transform:translateY(-5px);box-shadow:0 30px 50px -30px rgba(0,0,0,.4)}.proj:hover img{transform:scale(1.07)}
+.proj .bd{padding:1rem 1.2rem 1.2rem}.proj h3{font-size:1rem;font-weight:600}.proj small{color:var(--muted);display:flex;gap:.3rem;align-items:center;font-size:.8rem}
+
+/* testimonial + cta */
+.tc{display:grid;grid-template-columns:1.2fr 1fr;gap:1.6rem;align-items:stretch}
+.quote{border:1px solid var(--line);border-radius:var(--r);padding:2.2rem;position:relative;overflow:hidden;min-height:250px}
+.quote blockquote{font-size:1.08rem;line-height:1.7;transition:opacity .4s, transform .4s}
+.quote blockquote::before{content:"“";display:block;font-size:4rem;line-height:.6;color:var(--leaf);font-family:Georgia,serif;margin-bottom:.6rem}
+.who{display:flex;gap:.9rem;align-items:center;margin-top:1.4rem}.who i{width:46px;height:46px;border-radius:50%;background:var(--grey);display:grid;place-items:center;color:var(--green);font-style:normal;font-weight:700}
+.who b{display:block;font-size:.92rem}.who small{color:var(--muted);font-size:.8rem}
+.stars{color:#e3a81c;margin-left:auto;letter-spacing:2px}
+.tnav{display:flex;gap:.5rem}.tnav button{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:.3s}.tnav button:hover{background:var(--green);color:#fff}
+.cta{background:linear-gradient(135deg,var(--forest),#163a20);color:#fff;border-radius:var(--r);padding:2.6rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.cta::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;border:40px solid rgba(118,169,67,.15);right:-90px;bottom:-110px}
+.cta h2{font-size:clamp(1.6rem,2.6vw,2.2rem)}.cta p{opacity:.85;margin:.9rem 0 1.8rem;max-width:38ch}
+.note{font-size:.72rem;color:var(--muted);margin-top:.8rem}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.2fr;gap:3rem}
+form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+form .f{grid-column:1/-1}
+input,select,textarea{font:inherit;width:100%;padding:.95rem 1.1rem;border:1px solid var(--line);border-radius:10px;background:#fff;transition:.3s}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 4px rgba(118,169,67,.15)}
+.cinfo li{list-style:none;display:flex;gap:.9rem;margin-bottom:1.1rem;font-size:.95rem}.cinfo .ico{color:var(--green);flex:none;margin-top:3px}
+
+/* footer */
+footer{background:var(--char);color:#c9d2cc;padding:4.5rem 0 1.6rem;font-size:.86rem}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.4fr 1.5fr;gap:2.2rem}
+footer h4{color:#fff;font-size:.9rem;margin-bottom:1rem}
+footer ul{list-style:none;display:grid;gap:.5rem}footer ul a:hover{color:var(--leaf)}
+footer .logo{color:#fff;margin-bottom:1rem}
+.nl{display:flex;border:1px solid rgba(255,255,255,.2);border-radius:10px;overflow:hidden}.nl input{border:0;background:transparent;color:#fff;border-radius:0}.nl button{background:var(--green);color:#fff;padding:0 1rem}
+.soc{display:flex;gap:.6rem;margin-top:1.2rem}.soc a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:grid;place-items:center;transition:.3s}.soc a:hover{background:var(--green);border-color:var(--green)}
+.soc .ico{width:16px;height:16px}
+.fb{border-top:1px solid rgba(255,255,255,.1);margin-top:3rem;padding-top:1.4rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.78rem}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.st>*{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.st.in>*{opacity:1;transform:none}
+.st.in>*:nth-child(2){transition-delay:.08s}.st.in>*:nth-child(3){transition-delay:.16s}.st.in>*:nth-child(4){transition-delay:.24s}.st.in>*:nth-child(5){transition-delay:.32s}.st.in>*:nth-child(6){transition-delay:.4s}
+
+/* video modal */
+.modal{position:fixed;inset:0;background:rgba(10,16,14,.9);z-index:80;display:none;place-items:center;padding:5%}
+.modal.open{display:grid}.modal iframe{width:min(960px,100%);aspect-ratio:16/9;border:0;border-radius:12px}
+
+@media(max-width:1100px){
+ .menu,.nav>.btn{display:none}.burger{display:block}
+ .grid6{grid-template-columns:repeat(3,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}
+ .fgrid{grid-template-columns:1fr 1fr 1fr}
+ .why .wrap,.sus .wrap{grid-template-columns:1fr}
+ .tags{display:none}
+}
+@media(max-width:860px){
+ .strip .wrap{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;width:100%}
+ .strip a{flex:0 0 auto;scroll-snap-align:start;padding:1.2rem 1.4rem}
+ .about,.tc,.contact{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}
+ .stats{grid-template-columns:1fr 1fr}.pill{grid-template-columns:1fr 1fr;gap:2rem 1rem}
+ .float{display:none}
+}
+@media(max-width:560px){
+ .grid3,.grid4{grid-template-columns:1fr}.grid6{grid-template-columns:1fr 1fr}
+ .collage{height:340px}.badge{width:110px;height:110px}.badge b{font-size:1.2rem}
+ .about ul{grid-template-columns:1fr}form{grid-template-columns:1fr}
+ .fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child,.fgrid>div:last-child{grid-column:1/-1}
+ .hero h1{font-size:2.15rem}.ctrl{bottom:1.4rem}.quote,.cta{padding:1.6rem}
+ .ind .im{height:130px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.rv,.st>*{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute">
+ <symbol id="arr" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+ <symbol id="arrl" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+ <symbol id="bld" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4v18M19 21V11l-7-3M8 9v.01M8 12v.01M8 15v.01M15 13v.01M15 16v.01"/></symbol>
+ <symbol id="sparkle" viewBox="0 0 24 24"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8zM19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></symbol>
+ <symbol id="doc" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></symbol>
+ <symbol id="gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-2.7 1.1V21a2 2 0 0 1-4 0v-.1a1.6 1.6 0 0 0-2.7-1.1l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A1.6 1.6 0 0 0 3.6 14H3a2 2 0 0 1 0-4h.1a1.6 1.6 0 0 0 1.1-2.7l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A1.6 1.6 0 0 0 10 3.6V3a2 2 0 0 1 4 0v.1a1.6 1.6 0 0 0 2.7 1.1l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0 1.1 2.7H21a2 2 0 0 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1.3z"/></symbol>
+ <symbol id="leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10zM2 21c0-3 1.9-5.4 5-6"/></symbol>
+ <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+ <symbol id="tool" viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0 5 5L21 13l-8 8-3-3 8-8M3 21l6-6M7 3l4 4-3 3-4-4z"/></symbol>
+ <symbol id="users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-4-6.3"/></symbol>
+ <symbol id="bolt" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></symbol>
+ <symbol id="recycle" viewBox="0 0 24 24"><path d="M7 19H4.8a1.8 1.8 0 0 1-1.6-2.7L7 10M11 19h8.2a1.8 1.8 0 0 0 1.6-2.7L19 13M14 16l-3 3 3 3M8.3 13.7 7 9l-4.7 1.3M15.7 7.3 12.8 2.5a1.8 1.8 0 0 0-3.1 0L8 5.4M16.7 8.7 18 4M13 6.6l3.7 2.1"/></symbol>
+ <symbol id="shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"/></symbol>
+ <symbol id="heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+ <symbol id="home" viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v11h-6v-7H9v7H3z"/></symbol>
+ <symbol id="bag" viewBox="0 0 24 24"><path d="M6 7h12l1 14H5zM9 7a3 3 0 0 1 6 0"/></symbol>
+ <symbol id="bed" viewBox="0 0 24 24"><path d="M3 18V6M3 14h18v4M21 14v-3a3 3 0 0 0-3-3h-7v6M7 11h.01"/></symbol>
+ <symbol id="plus" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></symbol>
+ <symbol id="box" viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+ <symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+ <symbol id="phone" viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+ <symbol id="mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></symbol>
+ <symbol id="logo" viewBox="0 0 40 40"><path fill="currentColor" stroke="none" d="M8 38V16l7-4v26zM17 38V8l7-5v35zM26 38V18l7 3v17z"/></symbol>
+</svg>
+
+<header id="hdr">
+ <div class="wrap nav">
+  <a href="#home" class="logo" aria-label="SMART home"><svg><use href="#logo"/></svg><span><b>SMART</b><small>PROPERTY &amp; FACILITY SERVICES</small></span></a>
+  <nav class="menu" aria-label="Main">
+   <a href="#home" class="on">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#sustainability">Sustainability</a><a href="#contact">Contact</a>
+  </nav>
+  <a href="#contact" class="btn">Get a Quote <svg class="ico" width="16"><use href="#arr"/></svg></a>
+  <button class="burger" aria-label="Open menu" id="burger"><span></span><span></span><span></span></button>
+ </div>
+</header>
+<div class="drawer" id="drawer" aria-hidden="true">
+ <button class="x" aria-label="Close menu" id="close">×</button>
+ <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#industries">Industries</a><a href="#projects">Projects</a><a href="#sustainability">Sustainability</a><a href="#contact">Contact</a>
+ <a href="#contact" class="btn" style="align-self:flex-start;font-size:1rem;margin-top:1rem">Get a Quote</a>
+</div>
+
+<section class="hero" id="home" style="padding:0">
+ <div class="slide on"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2000&q=80" alt="Modern glass office building"></div>
+ <div class="slide"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80" alt="Bright modern office interior" loading="lazy"></div>
+ <div class="slide"><img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=2000&q=80" alt="Corporate towers at dusk" loading="lazy"></div>
+ <div class="wrap hero-c">
+  <div class="txt">
+   <span class="label">Spaces that work better</span>
+   <h1>Integrated Project Management and Facility Services</h1>
+   <p>For a Cleaner, Safer and More Productive Tomorrow.</p>
+   <div class="acts">
+    <a href="#services" class="btn">Our Services <svg class="ico" width="16"><use href="#arr"/></svg></a>
+    <button class="play" id="playBtn"><i><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></i> Watch Video</button>
+   </div>
+  </div>
+ </div>
+ <div class="tags"><span>PEOPLE</span><span>PLACES</span><span>PERFORMANCE</span></div>
+ <div class="ctrl"><div class="wrap">
+  <span id="cur">01</span><div class="bar"><i id="prog" class="run"></i></div><span style="opacity:.6">03</span>
+  <div class="arrows"><button aria-label="Previous slide" id="prev"><svg class="ico" width="16"><use href="#arrl"/></svg></button><button aria-label="Next slide" id="next"><svg class="ico" width="16"><use href="#arr"/></svg></button></div>
+ </div></div>
+ <a href="#about" class="float"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=400&q=70" alt="Office lounge"><span><small>Creating</small><b>Cleaner, Safer &amp;<br>Smarter Spaces</b></span><span class="circ" style="background:var(--green);color:#fff;border:0"><svg class="ico" width="16"><use href="#arr"/></svg></span></a>
+</section>
+
+<nav class="strip" aria-label="Services quick links"><div class="wrap">
+ <a href="#services"><svg class="ico"><use href="#bld"/></svg>Project<br>Management</a>
+ <a href="#services"><svg class="ico"><use href="#sparkle"/></svg>Housekeeping<br>Services</a>
+ <a href="#services"><svg class="ico"><use href="#doc"/></svg>Office<br>Interiors</a>
+ <a href="#services"><svg class="ico"><use href="#gear"/></svg>Integrated<br>Facility Services</a>
+ <a href="#sustainability"><svg class="ico"><use href="#leaf"/></svg>Sustainable<br>Operations</a>
+ <a href="#contact"><svg class="ico"><use href="#globe"/></svg>Pan-India<br>Support</a>
+</div></nav>
+
+<section id="about"><div class="wrap about">
+ <div class="rv">
+  <span class="label">About SMART</span>
+  <h2>Building Better Spaces for People and Businesses</h2>
+  <p class="lead">SMART Property and Facility Services Private Limited delivers integrated project and facility management solutions designed to create cleaner, safer, more productive and inspiring environments — from the first floor plan to everyday upkeep.</p>
+  <ul><li>Single-point accountability</li><li>Trained, verified staff</li><li>Transparent reporting</li><li>Eco-conscious practices</li></ul>
+  <a href="#services" class="btn">Learn More <svg class="ico" width="16"><use href="#arr"/></svg></a>
+ </div>
+ <div class="collage rv">
+  <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80" alt="Modern office interior with plants" loading="lazy">
+  <img class="b" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=700&q=80" alt="Housekeeping professional at work" loading="lazy">
+  <div class="badge"><b>Quality</b><small>First, Always</small></div>
+ </div>
+</div></section>
+
+<section id="services" class="bg-grey"><div class="wrap">
+ <div class="head rv"><div><span class="label">Our Services</span><h2>Comprehensive Solutions<br>for Your Spaces</h2></div><a href="#contact" class="more">Discuss Your Requirement <svg class="ico" width="16"><use href="#arr"/></svg></a></div>
+ <div class="grid3 st">
+  <a href="#contact" class="card"><div class="im"><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=75" alt="Engineers reviewing a project on site" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#bld"/></svg></span><span class="go"><svg class="ico" width="16"><use href="#arr"/></svg></span><h3>Project Management</h3><p>Planning, coordination, timelines, budgets and on-ground execution.</p></div></a>
+  <a href="#contact" class="card"><div class="im"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=75" alt="Professional cleaning service" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#sparkle"/></svg></span><span class="go"><svg class="ico" width="16"><use href="#arr"/></svg></span><h3>Housekeeping Services</h3><p>Daily and deep cleaning, hygiene protocols and trained staff.</p></div></a>
+  <a href="#contact" class="card"><div class="im"><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=75" alt="Modern office interior" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#doc"/></svg></span><span class="go"><svg class="ico" width="16"><use href="#arr"/></svg></span><h3>Office Interiors</h3><p>Space planning, interior design, turnkey fit-outs and renovations.</p></div></a>
+  <a href="#contact" class="card"><div class="im"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=75" alt="Contemporary commercial building" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#gear"/></svg></span><span class="go"><svg class="ico" width="16"><use href="#arr"/></svg></span><h3>Integrated Facility Services</h3><p>Technical maintenance, security support, landscaping and utilities.</p></div></a>
+  <a href="#sustainability" class="card"><div class="im"><img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=75" alt="Young plant held in hands" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#leaf"/></svg></span><span class="go"><svg class="ico" width="16"><use href="#arr"/></svg></span><h3>Green &amp; Sustainable Solutions</h3><p>Resource efficiency, waste reduction and environmental care.</p></div></a>
+  <a href="#contact" class="card"><div class="im"><img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=75" alt="Team discussing a tailored plan" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#tool"/></svg></span><span class="go"><svg class="ico" width="16"><use href="#arr"/></svg></span><h3>Custom Solutions</h3><p>Services tailored to your industry and specific business needs.</p></div></a>
+ </div>
+</div></section>
+
+<section class="why"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=60" alt="" loading="lazy"><div class="wrap">
+ <div class="rv"><span class="label">Why SMART</span><h2>People. Places. Performance.</h2><p>We combine experience, innovation and a people-first approach to deliver high-quality spaces that work better every day.</p><a href="#about" class="btn light">Discover Our Story <svg class="ico" width="16"><use href="#arr"/></svg></a></div>
+ <div class="stats st">
+  <div><svg class="ico"><use href="#bld"/></svg><b>500+</b><small>Projects Completed*</small></div>
+  <div><svg class="ico"><use href="#users"/></svg><b>100+</b><small>Happy Clients*</small></div>
+  <div><svg class="ico"><use href="#shield"/></svg><b>10+</b><small>Years of Experience*</small></div>
+  <div><svg class="ico"><use href="#heart"/></svg><b>95%</b><small>Client Retention*</small></div>
+ </div>
+</div></section>
+
+<section id="industries"><div class="wrap">
+ <div class="head rv"><div><span class="label">Industries We Serve</span><h2>Tailored Solutions for<br>Diverse Sectors</h2></div><a href="#contact" class="more">Talk to an Expert <svg class="ico" width="16"><use href="#arr"/></svg></a></div>
+ <div class="grid6 st">
+  <div class="ind"><div class="im"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=500&q=70" alt="Commercial office" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#bld"/></svg></span><h3>Commercial Offices</h3></div></div>
+  <div class="ind"><div class="im"><img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=70" alt="Residential towers" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#home"/></svg></span><h3>Residential Societies</h3></div></div>
+  <div class="ind"><div class="im"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=500&q=70" alt="Retail store" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#bag"/></svg></span><h3>Retail &amp; Commercial Spaces</h3></div></div>
+  <div class="ind"><div class="im"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=70" alt="Hotel resort" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#bed"/></svg></span><h3>Hospitality &amp; Leisure</h3></div></div>
+  <div class="ind"><div class="im"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=500&q=70" alt="Hospital corridor" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#plus"/></svg></span><h3>Healthcare Facilities</h3></div></div>
+  <div class="ind"><div class="im"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=500&q=70" alt="Warehouse aisles" loading="lazy"></div><div class="bd"><span class="ci"><svg class="ico"><use href="#box"/></svg></span><h3>Industrial &amp; Warehousing</h3></div></div>
+ </div>
+</div></section>
+
+<section id="sustainability" class="sus"><img src="https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=2000&q=70" alt="" loading="lazy"><div class="wrap">
+ <div class="rv"><span class="label">Sustainability</span><h2>A Cleaner, Greener Tomorrow</h2><p>We are committed to responsible and sustainable practices that create healthier spaces and a brighter future.</p><a href="#contact" class="btn light">Our Commitment <svg class="ico" width="16"><use href="#arr"/></svg></a></div>
+ <div class="pill st">
+  <div><i><svg class="ico"><use href="#bolt"/></svg></i>Energy Efficiency</div>
+  <div><i><svg class="ico"><use href="#recycle"/></svg></i>Waste Management</div>
+  <div><i><svg class="ico"><use href="#shield"/></svg></i>Environmentally Safe Practices</div>
+  <div><i><svg class="ico"><use href="#users"/></svg></i>People Wellbeing</div>
+ </div>
+</div></section>
+
+<section id="projects"><div class="wrap">
+ <div class="head rv"><div><span class="label">Our Projects</span><h2>Transforming Spaces<br>Across India</h2></div><a href="#contact" class="more">Start Your Project <svg class="ico" width="16"><use href="#arr"/></svg></a></div>
+ <div class="grid4 st">
+  <div class="proj"><div class="im"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=75" alt="Corporate office building" loading="lazy"><span>Corporate</span></div><div class="bd"><h3>Corporate Office</h3><small><svg class="ico" width="14"><use href="#pin"/></svg>Pune, Maharashtra</small></div></div>
+  <div class="proj"><div class="im"><img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&fit=crop&w=700&q=75" alt="IT park towers" loading="lazy"><span>Facility Management</span></div><div class="bd"><h3>IT Park Facility Management</h3><small><svg class="ico" width="14"><use href="#pin"/></svg>Bengaluru, Karnataka</small></div></div>
+  <div class="proj"><div class="im"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=75" alt="Luxury residence" loading="lazy"><span>Residential</span></div><div class="bd"><h3>Luxury Residential</h3><small><svg class="ico" width="14"><use href="#pin"/></svg>Mumbai, Maharashtra</small></div></div>
+  <div class="proj"><div class="im"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=75" alt="Industrial facility" loading="lazy"><span>Industrial</span></div><div class="bd"><h3>Industrial Facility</h3><small><svg class="ico" width="14"><use href="#pin"/></svg>Chakan, Pune</small></div></div>
+ </div>
+ <p class="note">* Project showcase and figures are sample content — replace with verified details.</p>
+</div></section>
+
+<section class="bg-grey"><div class="wrap tc">
+ <div class="rv">
+  <div class="head" style="margin-bottom:1.4rem"><div><span class="label">Testimonials</span><h2>What Our Clients Say</h2></div><div class="tnav"><button aria-label="Previous testimonial" id="tp"><svg class="ico" width="16"><use href="#arrl"/></svg></button><button aria-label="Next testimonial" id="tn"><svg class="ico" width="16"><use href="#arr"/></svg></button></div></div>
+  <div class="quote" style="background:#fff"><blockquote id="qt">SMART has transformed the way we manage our office spaces. Their team is professional, reliable and always delivers high-quality service.</blockquote>
+  <div class="who"><i id="qi">FH</i><span><b id="qn">Facility Head</b><small id="qr">Corporate Client (sample)</small></span><span class="stars">★★★★★</span></div></div>
+ </div>
+ <div class="cta rv"><h2>Let’s Build Better Spaces Together</h2><p>Partner with SMART for integrated project and facility services tailored to your needs.</p><a href="#contact" class="btn light" style="align-self:flex-start">Get in Touch <svg class="ico" width="16"><use href="#arr"/></svg></a></div>
+</div></section>
+
+<section id="contact"><div class="wrap contact">
+ <div class="rv"><span class="label">Contact</span><h2>Request a Quote</h2><p class="lead" style="margin:1rem 0 2rem">Tell us about your space. Our team will get back to you within one business day.</p>
+  <ul class="cinfo"><li><svg class="ico"><use href="#phone"/></svg>+91 00000 00000 <em style="color:var(--muted)">(add number)</em></li><li><svg class="ico"><use href="#mail"/></svg>info@yourdomain.com <em style="color:var(--muted)">(add email)</em></li><li><svg class="ico"><use href="#pin"/></svg>Office address, Pune, Maharashtra, India</li></ul></div>
+ <form class="rv" name="contact" method="POST" data-netlify="true">
+  <input type="hidden" name="form-name" value="contact">
+  <input name="name" placeholder="Full name" required aria-label="Full name">
+  <input name="company" placeholder="Company" aria-label="Company">
+  <input type="email" name="email" placeholder="Email address" required aria-label="Email">
+  <input type="tel" name="phone" placeholder="Phone" aria-label="Phone">
+  <select name="service" class="f" aria-label="Service"><option>Project Management</option><option>Housekeeping Services</option><option>Office Interiors</option><option>Integrated Facility Services</option><option>Green &amp; Sustainable Solutions</option><option>Custom Solutions</option></select>
+  <textarea name="message" rows="4" class="f" placeholder="Tell us about your requirement" aria-label="Message"></textarea>
+  <button class="btn f" style="justify-content:center" type="submit">Send Enquiry <svg class="ico" width="16"><use href="#arr"/></svg></button>
+ </form>
+</div></section>
+
+<footer><div class="wrap">
+ <div class="fgrid">
+  <div><a href="#home" class="logo"><svg width="34" height="34"><use href="#logo"/></svg><span><b>SMART</b><small>PROPERTY &amp; FACILITY SERVICES</small></span></a><p>Integrated project management and facility services for spaces that work better.</p>
+   <div class="soc"><a href="#" aria-label="LinkedIn"><svg class="ico"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a><a href="#" aria-label="Instagram"><svg class="ico" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a><a href="#" aria-label="Facebook"><svg class="ico" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></div></div>
+  <div><h4>Quick Links</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#industries">Industries</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li></ul></div>
+  <div><h4>Our Services</h4><ul><li>Project Management</li><li>Housekeeping Services</li><li>Office Interiors</li><li>Integrated Facility Services</li><li>Sustainability</li><li>Custom Solutions</li></ul></div>
+  <div><h4>Contact Us</h4><ul><li>+91 00000 00000</li><li>info@yourdomain.com</li><li>Pune, Maharashtra, India</li></ul></div>
+  <div><h4>Subscribe to Our Newsletter</h4><form class="nl" onsubmit="event.preventDefault();this.querySelector('input').value='Thank you!'"><input type="email" placeholder="Your email address" aria-label="Email" required><button aria-label="Subscribe"><svg class="ico" width="16"><use href="#arr"/></svg></button></form></div>
+ </div>
+ <div class="fb"><span>© <span id="yr"></span> SMART Property and Facility Services Pvt. Ltd. All rights reserved.</span><span>Privacy Policy · Terms &amp; Conditions</span></div>
+</div></footer>
+
+<div class="modal" id="modal" role="dialog" aria-label="Video"><iframe id="vid" title="Company video" allow="autoplay; fullscreen"></iframe></div>
+
+<script>
+const h=document.getElementById('hdr');addEventListener('scroll',()=>h.classList.toggle('solid',scrollY>40),{passive:true});
+const d=document.getElementById('drawer');document.getElementById('burger').onclick=()=>d.classList.add('open');
+document.getElementById('close').onclick=()=>d.classList.remove('open');d.querySelectorAll('a').forEach(a=>a.onclick=()=>d.classList.remove('open'));
+// slider
+const s=[...document.querySelectorAll('.slide')],cur=document.getElementById('cur'),pr=document.getElementById('prog');let i=0,t;
+function go(n){s[i].classList.remove('on');i=(n+s.length)%s.length;s[i].classList.add('on');cur.textContent='0'+(i+1);pr.classList.remove('run');void pr.offsetWidth;pr.classList.add('run');clearTimeout(t);t=setTimeout(()=>go(i+1),6000)}
+t=setTimeout(()=>go(1),6000);document.getElementById('next').onclick=()=>go(i+1);document.getElementById('prev').onclick=()=>go(i-1);
+// reveal
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.rv,.st').forEach(el=>io.observe(el));
+// active nav
+const links=[...document.querySelectorAll('.menu a')];
+const so=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)links.forEach(l=>l.classList.toggle('on',l.getAttribute('href')=='#'+x.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+document.querySelectorAll('section[id]').forEach(x=>so.observe(x));
+// testimonials (sample)
+const T=[["SMART has transformed the way we manage our office spaces. Their team is professional, reliable and always delivers high-quality service.","FH","Facility Head","Corporate Client (sample)"],["From fit-out to daily housekeeping, everything is handled through one accountable team. Our workplace has never looked better.","AM","Admin Manager","IT Park (sample)"],["Responsive, well-trained staff and transparent reporting. They genuinely care about the spaces they manage.","SC","Society Committee","Residential Client (sample)"]];
+let q=0;const qt=document.getElementById('qt');function tq(n){q=(n+T.length)%T.length;qt.style.opacity=0;setTimeout(()=>{const[a,b,c,e]=T[q];qt.textContent=a;qi.textContent=b;qn.textContent=c;qr.textContent=e;qt.style.opacity=1},300)}
+tn.onclick=()=>tq(q+1);tp.onclick=()=>tq(q-1);
+// video
+const m=document.getElementById('modal'),v=document.getElementById('vid');
+playBtn.onclick=()=>{v.src='https://www.youtube.com/embed/5qap5aO4i9A?autoplay=1';m.classList.add('open')};m.onclick=()=>{m.classList.remove('open');v.src=''};
+yr.textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
